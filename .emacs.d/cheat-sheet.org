@@ -1,7 +1,19 @@
 ==Emacs Cheat Sheet==
-- Notation explained at bottom. Don't panic, C-x b will take you back
-  where you were before this.
-* Basic
+Don't panic, C-x b can take you back where you were before this.
+This file contains useful key combinations which you may have forgotten.
+Move the cursor to the line you want, and hit TAB to see its contents.
+* Notation 
+  SPC,RET,ESC,TAB := space bar, enter, escape, and tab.
+  C-a             := press 'ctrl' and 'a' at the same time.
+  M-a             := press 'alt' and 'a' at the same time
+  C-M-a           := press 'ctrl' 'alt' and 'a' at the same time.
+  C-a C-b         := press C-a, then C-b
+  C-a b           := press C-a, then 'b' 
+  C-a foo         := press C-a, then type 'foo' in the prompt
+  <description>   := press a key or type something into a prompt
+                     corresponding to the description.
+  [C-a, C-b]      := press C-a or C-b
+* Basic 
   C-x C-c             := close emacs
   C-x C-f <name/path> := open file
   C-x C-s             := save file
@@ -12,15 +24,6 @@
   M-x <function>      := run named function
   C-h f <function>    := explain what that function does
   C-u <num> <cmd>     := do <cmd> <num> times
-* Buffers, Windows and screen layout
-  - Note, in emacs: 'buffers' contain text, 'windows' are boxes to
-    display a buffer, 'frames' are graphical arrangements of windows.
-  C-x b <buffer name> := switch buffer in current frame.
-  C-x k               := kill current buffer
-  C-x o               := move to next window in frame.
-  C-x 0               := remove current window from frame
-  C-x 1               := expand current window to whole frame
-  [C-x 2, C-x 3]      := split current window horizontally/vertically
 * Movement and Selection 
   C-SPC         := start selecting text at cursor location. This is
                    like holding 'shift' while moving in other programs.
@@ -33,9 +36,9 @@
                    <str>     := refine/change search string.
                    [C-s,C-r] := move to next/prev match
                    RET       := exit prompt
-* Editing
+* Editing 
   [C-x u, C-/, C-_]  := undo. They all do the same thing.
-  [C-w,M-w]          := cut/copy a selected region (like from C-SPC)
+  [C-w, M-w]         := cut/copy a selected region (like from C-SPC)
   C-y                := paste (they call it 'yank')
   M-y                := After typing C-y, cycles through copied text.
   C-k                := kill line
@@ -43,9 +46,20 @@
                         literal new-line without exiting prompt,
                         hit C-q C-j.
   M-x replace-regexp := search and replace regexp. Need to rtfm for
-                        this one. EXTREMELY useful.
-* Misc functions
-  M-x appropos       := search for function to find documentation                        
+  this one. EXTREMELY useful.
+* Buffers, Windows and Screen Layout 
+  Note: 'buffers' are things that contain text
+        'windows' are boxes to display a buffer
+        'frames'  are graphical arrangements of windows
+  C-x b <buffer name> := switch buffer in current frame.
+  C-x k               := kill current buffer
+  C-x o               := move to next window in frame.
+  C-x 0               := remove current window from frame
+  C-x 1               := expand current window to whole frame
+  [C-x 2, C-x 3]      := split current window horizontally/vertically
+
+* Misc functions 
+  M-x appropos   := search for function to find documentation                        
   M-x eshell     := a basic shell/command prompt
   M-x shell      := Starts an actual shell like bash, but can't handle
                     formatting/colors. Cooperates with normal emacs
@@ -56,14 +70,4 @@
                     run emacs in it.
   M-x linum-mode := display line numbers.
   M-x tetris     := Attempt to stack blocks. Useful productivity tool.  
-* Notation
-  SPC,RET,ESC,TAB := space bar, enter, escape, and tab.
-  C-a             := press 'ctrl' and 'a' at the same time.
-  M-a             := press 'alt' and 'a' at the same time
-  C-M-a           := press 'ctrl' 'alt' and 'a' at the same time.
-  C-a C-b         := press C-a, then C-b
-  C-a b           := press C-a, then 'b' 
-  C-a foo         := press C-a, then type 'foo' in the prompt
-  <description>   := press a key or type something into a prompt
-                     corresponding to the description.
-  [C-a, C-b]      := press C-a or C-b
+
